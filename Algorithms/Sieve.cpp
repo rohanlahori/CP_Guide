@@ -10,7 +10,7 @@ void sieve(ll n)
         {
             if(a[i]==0)
             {
-                for(ll j=i*2;j<n;j+=i)
+                for(ll j=i*2;j<=n;j+=i)
                 {
                     a[j]=1;
                 }
