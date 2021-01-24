@@ -7,7 +7,6 @@ ll binaryexponention(ll a,ll b)
             {
                 result*=a;
             }
-            binaryexponention(a,b/2);
             a*=a;
             b/=2;
         }
