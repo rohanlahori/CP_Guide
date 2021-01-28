@@ -1,27 +1,23 @@
 void sieve(ll n)
+{
+    vector<char> is_prime(n+1, true);
+    is_prime[0] = is_prime[1] = false;
+    for (int i = 2; i <= n; i++) 
     {
-        ll a[n+1];
-        a[1]=1;
-        f(i,2,n+1)
+        if (is_prime[i] && (long long)i * i <= n) 
         {
-            a[i]=0;
-        }
-        for(ll i=2;i<=sqrt(n);i++)
-        {
-            if(a[i]==0)
+            for (int j = i * i; j <= n; j += i)
             {
-                for(ll j=i*2;j<=n;j+=i)
-                {
-                    a[j]=1;
-                }
+                is_prime[j] = false;
             }
         }
-        f(i,1,n+1)
-        {
-            if(a[i]==0)
-            {
-                cout<<i<<" ";
-            }
-        }
-        cout<<"\n";
     }
+    f(i,0,n)
+    {
+        if(is_prime[i]==1)
+        {
+            cout<<i<<" ";
+        }
+    }
+}
+// primes till 10^7 
