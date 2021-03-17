@@ -21,51 +21,14 @@ using namespace std;
 #define INF 1000000000000000003 
 #define mi map<int,int>
 #define mod 1000000007
-//  for (auto &a : A)
-//cin >> a;
-//for (auto m : map) {
-//std::vector<int>::iterator it; 
-//it = std::find (v.begin(), v.end(), ser);
-//if (it != v.end())
-// ll j=0;
-// 		unordered_map<int, int> mp; 
-// 		for (int i = 0; i < n; i++) 
-// 		{
-//         	mp[a[i]]++; 
-// 		}
-// 		for (auto x : mp) 
-// 		{
-//             if(x.second==1)
-//             {
-//                 b[j]=x.first;
-//                 j++;
-//             }
-// 		}
-void two()
+void codeforces()
 {
 	ll t;
 	cin>>t;
-	ll a,b,sum;
 	while(t--)
 	{
-		cin>>a>>b;
-
+		
 	}
-}
-void fun()
-{
-	ll t,n;
-	cin>>t;
-	while(t--)
-	{
-		cin>>n;
-		ll a[n];
-		f(i,0,n) 
-		{
-			cin>>a[i];
-		}
-	}
-
 }
 
 int main()
@@ -74,6 +37,5 @@ int main()
 //   freopen('output.txt', 'w', stdout);
 	ios::sync_with_stdio(0);// Input and output clearance
 	cin.tie(0);
-	fun();
-	//two();
+	codeforces();
 }
