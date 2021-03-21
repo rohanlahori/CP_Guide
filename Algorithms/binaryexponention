@@ -1,3 +1,5 @@
+// Power  a to the power b  a^b 
+
 ll binaryexponention(ll a,ll b)
     {
         ll result=1;
