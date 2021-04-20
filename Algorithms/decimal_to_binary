@@ -1,0 +1,26 @@
+string decimal_to_binary(ll a)
+{
+    // all binary numbers are in 32 bit decimal form
+    ll val=a;
+    string s="";
+    ll cnt=0;
+    while(val!=0)
+    {
+        ll remainder=val%2;
+        val/=2;
+        if(remainder==0)
+        {
+            s+='0';
+        }
+        else{
+            s+='1';
+        }
+        cnt++;
+    }
+    f(i,cnt,32)
+    {
+        s+='0';
+    }
+    reverse(s.begin(),s.end());
+    return s;
+}
