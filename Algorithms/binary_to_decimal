@@ -1,0 +1,14 @@
+int bintodec(string s)
+{
+    reverse(s.begin(),s.end());
+    ll ans=0;
+    f(i,0,s.length())
+    {
+        if(s[i]=='1')
+        {
+            ans+=binaryexponention(2,i);
+            // ans%=1000003;
+        }
+    }
+    return ans;
+}
