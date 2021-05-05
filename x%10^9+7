@@ -1,9 +1,0 @@
-ll modulo(ll sum)
-{
-  sum%=mod;
-  if(sum<0)
-  {
-    sum+=mod;
-  }
-  return sum;
-}
