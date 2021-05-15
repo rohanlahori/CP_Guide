@@ -48,8 +48,8 @@ int main()
 	cin.tie(0);
 	ll n;
 	cin>>n;
-	adj.resize(n+1);
-	f(i,0,n-1)
+	adj.resize(1000000);
+	f(i,0,n)
 	{
 		ll u,v;
 		cin>>u>>v;
