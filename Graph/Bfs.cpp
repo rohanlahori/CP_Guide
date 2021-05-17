@@ -69,5 +69,11 @@ int main()
 		adj[v].pb(u);
 	}
 	head=1;
-	bfs(head);
+    for(int i=1;i<=n;i++)
+    {
+        if(visited[i]==0)
+        {
+            bfs(i);
+        }
+    }
 }
