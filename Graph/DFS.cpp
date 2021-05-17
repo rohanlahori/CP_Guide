@@ -28,15 +28,17 @@ using namespace std;
 #define rev(i,x,z) for(ll i=x;i>=z;i--)    
 vector<vi>adj;
 int head;
-void dfs(int cur=head,int parent=-1)
+vector<bool>visited(100000,0);
+void dfs(int cur=head)
 {
 	// current is the given head node of graph
 	cout<<cur<<" ";
+    visited[cur]=1;
 	for(auto neighbour:adj[cur])
 	{
-		if(neighbour!=parent)
+		if(visited[neighbour]!=1)
 		{
-			dfs(neighbour,cur);
+			dfs(neighbour);
 		}
 	}
 }
@@ -57,5 +59,12 @@ int main()
 		adj[v].pb(u);
 	}
 	head=1;
-	dfs();
+    f(i,1,n+1)
+    {
+        if(visited[i]!=1)
+        {
+            head=i;
+            dfs();
+        }
+    }
 }
