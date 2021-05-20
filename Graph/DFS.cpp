@@ -29,11 +29,11 @@ using namespace std;
 vector<vi>adj;
 int head;
 vector<bool>visited(100000,0);
-void dfs(int cur=head)
+void dfs(int cur)
 {
 	// current is the given head node of graph
 	cout<<cur<<" ";
-    visited[cur]=1;
+    	visited[cur]=1;
 	for(auto neighbour:adj[cur])
 	{
 		if(visited[neighbour]!=1)
@@ -58,13 +58,11 @@ int main()
 		adj[u].pb(v);
 		adj[v].pb(u);
 	}
-	head=1;
     f(i,1,n+1)
     {
         if(visited[i]!=1)
         {
-            head=i;
-            dfs();
+            dfs(i);
         }
     }
 }
