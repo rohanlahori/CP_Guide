@@ -37,7 +37,7 @@ ll binary_search(ll n,ll *a,ll target)
     ll st=0,end=n-1,mid;
     while(st<=end)
     {
-        mid=(st+end)/2;
+        mid=(st)+(end-st)/2;
         if(a[mid]==target)
         {
             return mid;
