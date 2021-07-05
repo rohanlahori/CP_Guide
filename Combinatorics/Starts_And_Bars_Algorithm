@@ -1,0 +1,2 @@
+The number of ways to put n identical objects into k labeled boxes is
+(n+k−1)C(n)
