@@ -1,0 +1,20 @@
+int mx=0;
+void rec(int i,int cur_wt,int cur_val,int W,int n,int *wt,int *val)
+{
+    // cout<<cur_wt<<" "<<cur_val<<" "<<mx<<nl;
+    if(cur_wt<=W && cur_val>=mx)
+    {
+        mx=cur_val;
+    }
+    if(i==n)
+    {
+        return;
+    }
+    rec(i+1,cur_wt+wt[i],cur_val+val[i],W,n,wt,val);
+    rec(i+1,cur_wt,cur_val,W,n,wt,val);
+}
+int knapSack(int W, int wt[], int val[], int n) 
+{ 
+    rec(0,0,0,W,n,wt,val);
+    return mx;
+}
