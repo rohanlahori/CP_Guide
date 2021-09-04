@@ -57,10 +57,7 @@ void shortest_path(int source,int target,vector<vpair> &adj,vector<ll> &distance
             if(distance[cur]+x.second<distance[x.first])
             {
                 distance[x.first]=distance[cur]+x.second;
-            }
-            if(visited[x.first]==0)
-            {
-                pq.push(mp(-1*(x.second),x.first));
+		pq.push(mp(-1*(x.second),x.first));
             }
         }
     }
