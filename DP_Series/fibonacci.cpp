@@ -1,3 +1,7 @@
+// Source: https://takeuforward.org/data-structure/dynamic-programming-introduction/
+// https://www.youtube.com/watch?v=tyB0ztf0DNY&t=281s
+
+
 #include <iostream>
 #include <bits/stdc++.h> 
 #include <algorithm>
