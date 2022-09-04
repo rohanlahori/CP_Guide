@@ -1,4 +1,8 @@
 3 D Vector Declaration:
-      vector<vector<vector<int>>>dp(n,vector<vector<int>>(m,vector<int>(m,-1)));
+vector<vector<vector<int>>>dp(n,vector<vector<int>>(m,vector<int>(m,-1)));
+      
 2 D Vector Declaration:
-  vector<vector<int>>dp(n,vector<int>(m,-1));
+      vector<vector<int>>dp(n,vector<int>(m,-1));
+  
+Minimum Priority Queue
+      priority_queue <int, vector<int>, greater<int>> pq;  
