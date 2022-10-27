@@ -63,6 +63,8 @@ class Trie{
     Trie(){
         root=new Node();
     }
+
+	// Insert a word inside the trie
     void insert(string word)
     {
         Node* node=root;
@@ -79,6 +81,7 @@ class Trie{
     }
 
 
+	// Search whether the word is present or not in the Trie
 	bool search(string word) 
 	{
 		Node *node = root;
@@ -92,6 +95,7 @@ class Trie{
 	}
 
 
+	// Find whether any word starts with prefix (abc) or not
 	bool startsWith(string prefix) {
 		Node* node = root;
 		for (int i = 0; i < prefix.size(); i++) {
@@ -104,7 +108,7 @@ class Trie{
 	}
 
 
-
+// Count of words which equals to given word(abc)
     int countWordsEqualTo(string word)
     {
         Node* node=root;
@@ -121,6 +125,8 @@ class Trie{
         return node->checkequal();
     }
 
+
+	// Number of words starting with given word(xyz)
     int countWordsStartingWith(string word)
     {
         Node* node=root;
@@ -138,6 +144,7 @@ class Trie{
         return node->count();
     }
 
+	// erase the given word from the Trie
     void erase(string word)
     {
         Node* node=root;
