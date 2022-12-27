@@ -1,0 +1,9 @@
+Most Important:
+    Median of 2 sorted array:
+      https://leetcode.com/problems/median-of-two-sorted-arrays
+    
+    Search in a rotated sorted array: Check all the modifications on Leetcode
+      (Hint: One part of the array will always be sorted in roatated arrays)
+      
+      Check the one with repeated elements (most important) :
+        https://leetcode.com/problems/search-in-rotated-sorted-array-ii/submissions/861627938/
