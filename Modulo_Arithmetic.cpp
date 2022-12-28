@@ -25,33 +25,39 @@ ll mod_sub(ll a, ll b, ll m)
     b = getmod(b, m);
     return (((a - b) % m) + m) % m;
 }
-ll bpowm(ll a, ll b, ll m)
+
+ll gcdExtended(ll a, ll b, ll *x, ll *y)
 {
-    ll ans = 1;
-
-    while(b > 0)
+    if (a == 0)
     {
-        if(b % 2 == 0)
-        {
-            a = ((a % m) * 1LL * (a % m)) % m;
-            b = (b) / 2;
-
-        }
-
-        else
-        {
-            ans = ((ans % m) * 1LL * (a % m)) % m;
-            b--;
-
-        }
-
+        *x = 0, *y = 1;
+        return b;
     }
-
-    return ans % m;
-
+ 
+    ll x1, y1;
+    ll gcd = gcdExtended(b%a, a, &x1, &y1);
+    *x = y1 - (b/a) * x1;
+    *y = x1;
+ 
+    return gcd;
 }
 
-ll mod_inv_prime(ll a, ll b)
+ll modInverse(ll b, ll m)
 {
-    return bpowm(a, b - 2, b);
+    ll x, y; // used in extended GCD algorithm
+    ll g = gcdExtended(b, m, &x, &y);
+    if (g != 1)
+    {
+        return -1;
+    }
+    return (x%m + m) % m;
+} 
+ll modDivide(ll a, ll b, ll m)
+{
+    a = a % m;
+    ll inv = modInverse(b, m);
+    ll ans=(inv * a) % m;
+
+    return ans;
+
 }
