@@ -16,3 +16,4 @@ if (s2.find(s1) != string::npos)
 return -1;
 
 
+s.subtring(x,y) //y not inclusive x is inclusive
