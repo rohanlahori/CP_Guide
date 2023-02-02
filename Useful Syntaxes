@@ -6,3 +6,13 @@ vector<vector<vector<int>>>dp(n,vector<vector<int>>(m,vector<int>(m,-1)));
   
 Minimum Priority Queue
       priority_queue <int, vector<int>, greater<int>> pq;  
+
+Check wheter s1 is a substring of s2.
+// C++ implementation of the approach
+if (s2.find(s1) != string::npos)
+{
+      return s2.find(s1);
+}
+return -1;
+
+
